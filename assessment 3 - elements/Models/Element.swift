@@ -9,7 +9,7 @@
 import UIKit
 
 
-struct Element: Codable {
+struct Element: Codable, Hashable {
     let name: String
     let atomicMass: Double
     let symbol: String

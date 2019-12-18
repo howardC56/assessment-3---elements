@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ElementsView: UIView {
+final class ElementsView: UIView {
 
     lazy var tableView: UITableView = {
         let tableV = UITableView()
@@ -17,7 +17,7 @@ class ElementsView: UIView {
         return tableV
     }()
     
-    func tableViewConstraints() {
+   private func tableViewConstraints() {
         addSubview(tableView)
         tableView.anchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor)
     }

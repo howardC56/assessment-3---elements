@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ElementDetailsViewController: UIViewController {
+final class ElementDetailsViewController: UIViewController {
     
     var selectedElement: Element!
     var elementDetailView = ElementDetailView()
-    var postedElements = [PostedElement]()
+    private var postedElements = [PostedElement]()
     
     
     override func viewDidLoad() {
@@ -52,20 +52,21 @@ class ElementDetailsViewController: UIViewController {
         }
         if duplicate == true {
             showAlert(title: "Duplicate", message: "Already Favorited")
+            sender.isEnabled = true
         } else {
             GetPostElementsAPI.manager.postElement(element: elementToPost) { [weak self] (result) in
                 DispatchQueue.main.async {
                     sender.isEnabled = true
                     switch result {
                     case .failure(let appError):
-                        print(appError)
+                        self?.showAlert(title: "Error", message: "\(appError)")
                     case .success:
                         self?.showAlert(title: "success", message: "cool")
+                        self?.loadPostedElements()
                     }
                 }
             }
         }
-        loadPostedElements()
     }
     
     private func labelTexts() {

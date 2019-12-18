@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ElementsViewController: UIViewController {
-
-    var elements = [Element]() {
+final class ElementsViewController: UIViewController {
+    
+    private var elements = [Element]() {
         didSet {
             elementsView.tableView.reloadData()
         }
@@ -26,8 +26,8 @@ class ElementsViewController: UIViewController {
         title = "Elements"
         getElements()
     }
-
-    func getElements() {
+    
+    private func getElements() {
         GetPostElementsAPI.manager.fetchElementsJson { [weak self] (result) in
             DispatchQueue.main.async {
                 switch result {
@@ -63,8 +63,8 @@ extension ElementsViewController: UITableViewDelegate, UITableViewDataSource {
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
-    
-    
+
+
 
 
 

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ElementDetailView: UIView {
+final class ElementDetailView: UIView {
 
     lazy var elementImageView: UIImageView = {
         let elementView = UIImageView()

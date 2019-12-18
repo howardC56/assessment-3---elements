@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ElementsTableViewCell: UITableViewCell {
+final class ElementsTableViewCell: UITableViewCell {
 
     lazy var elementNameLabel: UILabel = {
         let nameLabel = UILabel()

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct GetPostElementsAPI {
+ struct GetPostElementsAPI {
     
     private init() {}
     static let manager = GetPostElementsAPI()
