@@ -21,7 +21,6 @@
 		8890B50323A71B700066011E /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890B50223A71B700066011E /* NetworkHelper.swift */; };
 		8890B50523A72EA00066011E /* GetPostElementsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890B50423A72EA00066011E /* GetPostElementsAPI.swift */; };
 		8890B50723A72F110066011E /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890B50623A72F110066011E /* AppError.swift */; };
-		8890B50923A750240066011E /* PostedElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890B50823A750240066011E /* PostedElement.swift */; };
 		8890B50E23A7E9E20066011E /* ElementDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8890B50D23A7E9E20066011E /* ElementDetailView.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +41,6 @@
 		8890B50223A71B700066011E /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		8890B50423A72EA00066011E /* GetPostElementsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostElementsAPI.swift; sourceTree = "<group>"; };
 		8890B50623A72F110066011E /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
-		8890B50823A750240066011E /* PostedElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostedElement.swift; sourceTree = "<group>"; };
 		8890B50D23A7E9E20066011E /* ElementDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				8890B50023A5CB3C0066011E /* Element.swift */,
-				8890B50823A750240066011E /* PostedElement.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -211,7 +208,6 @@
 				8890B50723A72F110066011E /* AppError.swift in Sources */,
 				8890B4E423A599110066011E /* SceneDelegate.swift in Sources */,
 				8890B4FF23A5CA830066011E /* ElementsTableViewCell.swift in Sources */,
-				8890B50923A750240066011E /* PostedElement.swift in Sources */,
 				8890B4FD23A5C53F0066011E /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

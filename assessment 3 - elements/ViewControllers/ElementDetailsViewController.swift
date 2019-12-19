@@ -12,7 +12,7 @@ final class ElementDetailsViewController: UIViewController {
     
     var selectedElement: Element!
     var elementDetailView = ElementDetailView()
-    private var postedElements = [PostedElement]()
+    private var postedElements = [Element]()
     
     
     override func viewDidLoad() {
@@ -44,9 +44,9 @@ final class ElementDetailsViewController: UIViewController {
     @objc func addToFavorites(sender: UIBarButtonItem) {
         sender.isEnabled = false
         var duplicate = false
-        let elementToPost = PostedElement(favoritedBy: "Howard", elementName: selectedElement.name, elementSymbol: selectedElement.symbol)
+        let elementToPost = Element(category: selectedElement.category, melt: selectedElement.melt, boil: selectedElement.boil, period: selectedElement.period, symbol: selectedElement.symbol, discoveredBy: selectedElement.discoveredBy, molarHeat: selectedElement.molarHeat, phase: selectedElement.phase, source: selectedElement.source, summary: selectedElement.summary, favoritedBy: "Howard", number: selectedElement.number, appearance: selectedElement.appearance, density: selectedElement.density, atomicMass: selectedElement.atomicMass, name: selectedElement.name)
         for each in postedElements {
-            if each.elementName == selectedElement.name {
+            if each.name == selectedElement.name {
                 duplicate = true
             }
         }
@@ -83,7 +83,7 @@ final class ElementDetailsViewController: UIViewController {
         } else {
             elementDetailView.elementMeltLabel.text = "Melting Point: \(selectedElement.melt ?? 0)"
         }
-        elementDetailView.elementDiscoveredLabel.text = "Discovered by: \(selectedElement.discovered ?? "Unknown")"
+        elementDetailView.elementDiscoveredLabel.text = "Discovered by: \(selectedElement.discoveredBy ?? "Unknown")"
         let urlImageString = "http://images-of-elements.com/\(selectedElement.name.lowercased()).jpg"
         elementDetailView.elementImageView.getImage(with: urlImageString) { [weak self] (result) in
             DispatchQueue.main.async {

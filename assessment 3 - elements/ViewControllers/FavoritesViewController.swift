@@ -22,7 +22,7 @@ final class FavoritesViewController: UIViewController {
     
     let favoritesView = ElementsView()
     
-    private var postedElements = [PostedElement]()
+    private var postedElements = [Element]()
     
     private func getElements() {
         GetPostElementsAPI.manager.fetchElementsJson { [weak self] (result) in
@@ -40,7 +40,7 @@ final class FavoritesViewController: UIViewController {
     private func addElementToUi() {
         for each in postedElements {
             for ele in apiElements {
-                if each.elementName == ele.name {
+                if each.name == ele.name {
                     if !favoritedElements.contains(ele) {
                         favoritedElements.append(ele)
                     }
